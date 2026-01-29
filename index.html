@@ -1,0 +1,3558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="hqPgO236CIE0u1YRKoORZpcYnTcQF9KzyugMik9Y">
+    <link rel="icon" type="image/x-icon" href="https://scanmenu.in/restaurant/public/frontend-assets/icon/favicon.png">
+
+
+    <meta property="og:title" content="THE FLAVOUR CAFE">
+    <meta property="og:description" content="Click on the link to order">
+
+    <meta property="og:image"
+        content="https://scanmenu.in/restaurant/public/storage/uploads/banners/Nwy7gwbPR5hYbV6NR3DwhMEtbMKq0tEDObINl3sb.jpg">
+
+    <meta property="og:url"
+        content="https://scanmenu.in/restaurant/menu/table-1/ZDhmYmJiNTM4MzliMDYyMEY1Ri85aDdubFRrT0Q0L0FHQk4xc1E9PQ==?online=true">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="THE FLAVOUR CAFE">
+
+
+    <title>THE FLAVOUR CAFE</title>
+
+    <!-- libraries CSS -->
+    <link rel="stylesheet" href="https://scanmenu.in/restaurant/public/frontend-assets/icon/flaticon_restics.css">
+    <link rel="stylesheet"
+        href="https://scanmenu.in/restaurant/public/frontend-assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://scanmenu.in/restaurant/public/frontend-assets/vendor/splide/splide.min.css">
+    <link rel="stylesheet"
+        href="https://scanmenu.in/restaurant/public/frontend-assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet"
+        href="https://scanmenu.in/restaurant/public/frontend-assets/vendor/slim-select/slimselect.css">
+    <link rel="stylesheet"
+        href="https://scanmenu.in/restaurant/public/frontend-assets/vendor/animate-wow/animate.min.css">
+
+    <!-- custom CSS -->
+
+    <link rel="stylesheet" href="https://scanmenu.in/restaurant/public/frontend-assets/my-custom-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 50%;
+            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            transition: background-color 0.3s;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://scanmenu.in/restaurant/public/frontend-assets/css/custom-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <style>
+        i.flaticon-grocery-store {
+            margin-right: 5px;
+        }
+
+        .filter-item.cart-icon {
+            padding: 4px 8px;
+            margin-left: -28px;
+        }
+    </style>
+
+
+    <style>
+        :root {
+            --ul-primary: #C08010;
+            /* Default color if null */
+        }
+
+        #scrollToTopBtn,
+        .add-to-cart-btn {
+            background-color: #F0A014;
+            box-shadow: 0px 5px 13px #F6C672;
+        }
+
+        .product-title {
+            color: #F0A014 !important;
+        }
+
+        .filter-item {
+            color: white;
+            background-color: #F0A014;
+        }
+
+        .product-price {
+            color: #F3B343;
+        }
+
+        .filter-item:hover {
+            color: #ffffff !important;
+            background-color: #F0A014 !important;
+        }
+
+        .add-to-cart-btn:hover {
+            color: #ffffff;
+            background-color: #F0A014 !important;
+        }
+
+        .btn-primary {
+            color: white !important;
+            background-color: #F0A014 !important;
+            border-color: #F0A014 !important;
+        }
+
+        .variant-option .active {
+            color: white !important;
+            background-color: #F0A014 !important;
+            border-color: #F0A014 !important;
+        }
+
+        .btn-outline-primary {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border-color: #F0A014 !important;
+        }
+
+        .cart-price {
+            color: #F3B343 !important;
+        }
+
+        .menu-item-content span {
+            color: #C08010 !important;
+        }
+
+        .ul-footer {
+            background-color: #F0A014 !important;
+        }
+
+        #floatingCartBtn {
+            color: white;
+            background-color: #F0A014 !important;
+        }
+
+        .floating-btn {
+            box-shadow: 0px 5px 13px #F6C672 !important;
+        }
+
+        .cart-badge {
+            background-color: #F0A014 !important;
+        }
+    </style>
+
+
+    <script type="text/javascript"
+        class="flasher-js">(function () { var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.3.2/dist/flasher.min.js'; var FLASHER_FLASH_BAG_PLACE_HOLDER = {}; var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER); function mergeOptions(first, second) { return { context: merge(first.context || {}, second.context || {}), envelopes: merge(first.envelopes || [], second.envelopes || []), options: merge(first.options || {}, second.options || {}), scripts: merge(first.scripts || [], second.scripts || []), styles: merge(first.styles || [], second.styles || []), }; } function merge(first, second) { if (Array.isArray(first) && Array.isArray(second)) { return first.concat(second).filter(function (item, index, array) { return array.indexOf(item) === index; }); } return Object.assign({}, first, second); } function renderOptions(options) { if (!window.hasOwnProperty('flasher')) { console.error('Flasher is not loaded'); return; } requestAnimationFrame(function () { window.flasher.render(options); }); } function render(options) { if ('loading' !== document.readyState) { renderOptions(options); return; } document.addEventListener('DOMContentLoaded', function () { renderOptions(options); }); } if (1 === document.querySelectorAll('script.flasher-js').length) { document.addEventListener('flasher:render', function (event) { render(event.detail); }); } if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) { render(options); } else { var tag = document.createElement('script'); tag.setAttribute('src', rootScript); tag.setAttribute('type', 'text/javascript'); tag.onload = function () { render(options); }; document.head.appendChild(tag); } })();</script>
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- HEADER SECTION START -->
+    <header class="ul-header">
+        <div class="header-bottom-bg-wrapper to-be-sticky">
+            <div class="ul-header-bottom">
+
+
+
+                <div class="ul-header-bottom-wrapper ul-header-container">
+                    <div class="logo-container">
+                        <a href="https://scanmenu.in/restaurant/menu/table-1/ZDhmYmJiNTM4MzliMDYyMEY1Ri85aDdubFRrT0Q0L0FHQk4xc1E9PQ==?online=true"
+                            class="d-inline-block"><img
+                                src="https://scanmenu.in/restaurant/public/storage/uploads/users/EteACBQxR3DxSZ88xzgWoYacn5jJgnNtkG9bueca.png"
+                                alt="logo" class="logo"></a>
+                    </div>
+
+                    <!-- actions -->
+                    <div class="ul-header-actions">
+
+
+                        <button onclick='window.open("tel:8979028547");' class="filter-item item-type p-2 cart-icon"
+                            id="onlineCall"><i class="fa fa-phone" style="font-size:20px;"></i> CALL <button>
+
+                                <button class="filter-item item-type p-2 cart-icon position-relative" id="openCart">
+                                    <i class="flaticon-grocery-store" style="font-size:16px;"></i>
+                                    <span id="cart-counter" class="cart-badge">0</span>
+                                </button>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <main>
+
+
+
+
+
+
+        <section class="ul-inner-menu ul-section-spacing">
+
+
+
+
+            <div class="desktop-slider swiper">
+
+
+
+                <div class="slider-desktop swiper-wrapper">
+                    <div class="slide-desktop swiper-slide">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/banners/Nwy7gwbPR5hYbV6NR3DwhMEtbMKq0tEDObINl3sb.jpg"
+                            alt="Image-103534" />
+                    </div>
+                    <div class="slide-desktop swiper-slide">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/banners/Nwy7gwbPR5hYbV6NR3DwhMEtbMKq0tEDObINl3sb.jpg"
+                            alt="Image-103537" />
+                    </div>
+                    <div class="slide-desktop swiper-slide">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/banners/Nwy7gwbPR5hYbV6NR3DwhMEtbMKq0tEDObINl3sb.jpg"
+                            alt="Image-103535" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            </div>
+
+            <div class="ul-container  wow animate__fadeInUp">
+                <div class="menu-container">
+                    <a href="#momos-18437">
+                        <div class="new-menu-item" data-id="153635">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/sNv5pv4pASbJ8SFUEutKo00Ib7Ptp1hZyoEZ9RBA.jpg"
+                                    alt="Momos">
+                                <span class="menu-text">Momos</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#sandwiches-18437">
+                        <div class="new-menu-item" data-id="153636">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/3aASttaw1h223cGOYFM4nFwEWWGHoCR2frqzJHW3.jpg"
+                                    alt="Sandwiches">
+                                <span class="menu-text">Sandwiches</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#rolls-18437">
+                        <div class="new-menu-item" data-id="153637">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/Vni7h1Mi3dxV6TT9UeAdXWsnHeHIL2OahuWU4ZKV.jpg"
+                                    alt="Rolls">
+                                <span class="menu-text">Rolls</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#pizza-18437">
+                        <div class="new-menu-item" data-id="153638">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/BOER07aOqSDApfkvdxfQFHMqGfPBSGE8GnUaSzW4.jpg"
+                                    alt="Pizza">
+                                <span class="menu-text">Pizza</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#chicken-pizza-18437">
+                        <div class="new-menu-item" data-id="153640">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/cloV6WBuR1cghoMduXJr6j5CGY63BTNoWoxyazIV.jpg"
+                                    alt="Chicken Pizza">
+                                <span class="menu-text">Chicken Pizza</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#burgers-18437">
+                        <div class="new-menu-item" data-id="153641">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/VUO4IId4DeQAWWrq11jJZdiydWTjhX9cCTX095aw.jpg"
+                                    alt="Burgers">
+                                <span class="menu-text">Burgers</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#snacks-beverages-18437">
+                        <div class="new-menu-item" data-id="153642">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/3uW0sbFxuX3VUzJjO0qYhN9JziZchFJxTQyrNk7B.jpg"
+                                    alt="Coffee">
+                                <span class="menu-text">Coffee</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#chicken-salad">
+                        <div class="new-menu-item" data-id="154184">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/lYJp8UFc5YgovpJ3YXDnF1dT7PbQFYXf7CEH58EA.png"
+                                    alt="chicken salad diet for jim">
+                                <span class="menu-text">chicken salad diet for jim</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#cold-dring">
+                        <div class="new-menu-item" data-id="159941">
+                            <div class="menu-item-content">
+                                <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/ZgW6xK3PD0j4YHcHuS4vvXURfRNxoEYgwXTWgYOm.jpg"
+                                    alt="Cold Dring">
+                                <span class="menu-text">Cold Dring</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div id="itemsContainer">
+
+                    <div class="category-wise-item  my-3" id="momos-18437">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/sNv5pv4pASbJ8SFUEutKo00Ib7Ptp1hZyoEZ9RBA.jpg"
+                            alt="Momos">
+                        <h2 class="ul-section-title">Momos (2)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/3q9xiggOTsH8UxyUGb3sMU5Cy979934fXknvdS2g.jpg"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314567"
+                                        onclick="openFullscreen('1314567')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Chicken Afghani Momos</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Afghani style chicken momos - yummy!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 70</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314567"
+                                            data-name="Chicken Afghani Momos"
+                                            data-description="Afghani style chicken momos - yummy!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/3q9xiggOTsH8UxyUGb3sMU5Cy979934fXknvdS2g.jpg"
+                                            data-price="70.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/jLGnT8kvEhBMraEshQ3XPGmWotFNv0veUc2bixOd.jpg"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314568"
+                                        onclick="openFullscreen('1314568')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Chicken Kurkure Momos</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Crispy chicken momos - crunchy delight!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 60</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314568"
+                                            data-name="Chicken Kurkure Momos"
+                                            data-description="Crispy chicken momos - crunchy delight!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/jLGnT8kvEhBMraEshQ3XPGmWotFNv0veUc2bixOd.jpg"
+                                            data-price="60.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="sandwiches-18437">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/3aASttaw1h223cGOYFM4nFwEWWGHoCR2frqzJHW3.jpg"
+                            alt="Sandwiches">
+                        <h2 class="ul-section-title">Sandwiches (4)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/placeholders/184371757758933.png"
+                                        id="myImage-1314569" onclick="openFullscreen('1314569')"
+                                        alt="Placeholder image">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Veggie Sandwich</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Tasty veggie sandwich - fresh &amp; healthy!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 35</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314569" data-name="Veggie Sandwich"
+                                            data-description="Tasty veggie sandwich - fresh &amp;amp; healthy!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/placeholders/184371757758933.png"
+                                            data-price="35.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/k5cTqBgmwSnzzJ7EETqKCeLv14ifIT3Cjlgspk41.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314570"
+                                        onclick="openFullscreen('1314570')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Aloo Sandwich</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Aloo sandwich - potato power!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 40</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314570" data-name="Aloo Sandwich"
+                                            data-description="Aloo sandwich - potato power!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/k5cTqBgmwSnzzJ7EETqKCeLv14ifIT3Cjlgspk41.png"
+                                            data-price="40.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/34AtmOXQIAJrNMHvSrvblB1JqKR1r3e4l0Rm4UXR.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314571"
+                                        onclick="openFullscreen('1314571')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Paneer Sandwich</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Paneer sandwich - cheesy goodness!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 50</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314571" data-name="Paneer Sandwich"
+                                            data-description="Paneer sandwich - cheesy goodness!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/34AtmOXQIAJrNMHvSrvblB1JqKR1r3e4l0Rm4UXR.png"
+                                            data-price="50.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/BkNr74Zni5jpVHd0N0jne7afzcQr2RJJJGKjAyHC.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314572"
+                                        onclick="openFullscreen('1314572')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Chicken Sandwich</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Chicken sandwich - protein packed!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 70</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314572" data-name="Chicken Sandwich"
+                                            data-description="Chicken sandwich - protein packed!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/BkNr74Zni5jpVHd0N0jne7afzcQr2RJJJGKjAyHC.png"
+                                            data-price="70.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="rolls-18437">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/Vni7h1Mi3dxV6TT9UeAdXWsnHeHIL2OahuWU4ZKV.jpg"
+                            alt="Rolls">
+                        <h2 class="ul-section-title">Rolls (5)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/placeholders/184371757758933.png"
+                                        id="myImage-1314573" onclick="openFullscreen('1314573')"
+                                        alt="Placeholder image">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Aloo Roll</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Aloo ke rolls, crispy aur tasty!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 40</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314573" data-name="Aloo Roll"
+                                            data-description="Aloo ke rolls, crispy aur tasty!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/placeholders/184371757758933.png"
+                                            data-price="40.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/Yiw3hqs53KvSYSSM06QHIAq5KMTNpslmY3T2iMtn.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314574"
+                                        onclick="openFullscreen('1314574')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Egg Roll</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Anda roll, yummy!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 50</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314574" data-name="Egg Roll"
+                                            data-description="Anda roll, yummy!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/Yiw3hqs53KvSYSSM06QHIAq5KMTNpslmY3T2iMtn.png"
+                                            data-price="50.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/zYen2Kcs7fNx2c3mn2iMeTHVbS3QPULuMVYHTh1m.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314575"
+                                        onclick="openFullscreen('1314575')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Paneer Roll</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Paneer roll, soft and delicious!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 70</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314575" data-name="Paneer Roll"
+                                            data-description="Paneer roll, soft and delicious!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/zYen2Kcs7fNx2c3mn2iMeTHVbS3QPULuMVYHTh1m.png"
+                                            data-price="70.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/0QtL9dvU6Y3rgq0wIyi1EZ2VXIcAlNa36Jn0Vt9c.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314576"
+                                        onclick="openFullscreen('1314576')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Chicken Roll</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Chicken roll, juicy and spicy!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 80</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314576" data-name="Chicken Roll"
+                                            data-description="Chicken roll, juicy and spicy!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/0QtL9dvU6Y3rgq0wIyi1EZ2VXIcAlNa36Jn0Vt9c.png"
+                                            data-price="80.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/lpZKhsaXbDZpG2d7FIWumUwhqkW3CHdDZqODBPYP.jpg"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-2745660"
+                                        onclick="openFullscreen('2745660')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Chicken Afghani rolls</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Delicious and Creamy</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 90</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="2745660"
+                                            data-name="Chicken Afghani rolls" data-description="Delicious and Creamy"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/lpZKhsaXbDZpG2d7FIWumUwhqkW3CHdDZqODBPYP.jpg"
+                                            data-price="90.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="pizza-18437">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/BOER07aOqSDApfkvdxfQFHMqGfPBSGE8GnUaSzW4.jpg"
+                            alt="Pizza">
+                        <h2 class="ul-section-title">Pizza (4)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/cBdYwKX4o0wyf9UuZNKeb8Myv2JQ3qBwbvQVJA2b.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314577"
+                                        onclick="openFullscreen('1314577')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Capsicum Pizza</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Mirchi wali pizza, chatpata!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 80</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314577" data-name="Capsicum Pizza"
+                                            data-description="Mirchi wali pizza, chatpata!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/cBdYwKX4o0wyf9UuZNKeb8Myv2JQ3qBwbvQVJA2b.png"
+                                            data-price="80.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/N1q5kM4pBUjvinCnw4A3IhQCvKlr4Yw3KV4GckHn.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314578"
+                                        onclick="openFullscreen('1314578')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Corn Pizza</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Makkai pizza, yummy!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 80</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314578" data-name="Corn Pizza"
+                                            data-description="Makkai pizza, yummy!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/N1q5kM4pBUjvinCnw4A3IhQCvKlr4Yw3KV4GckHn.png"
+                                            data-price="80.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/7WMWelwwsDHp585QmsP8h6ktgtYmFaBKceOnVMCD.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314579"
+                                        onclick="openFullscreen('1314579')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Onion Pizza</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Pyaaz pizza, tasty!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 80</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314579" data-name="Onion Pizza"
+                                            data-description="Pyaaz pizza, tasty!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/7WMWelwwsDHp585QmsP8h6ktgtYmFaBKceOnVMCD.png"
+                                            data-price="80.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/BENFkD5BXwmwFsnaKgvtOThsS6CpBjuzD9BXbs63.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1316276"
+                                        onclick="openFullscreen('1316276')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">paneer pizza medium</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">paneer with onion</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 150</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1316276"
+                                            data-name="paneer pizza medium" data-description="paneer with onion"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/BENFkD5BXwmwFsnaKgvtOThsS6CpBjuzD9BXbs63.png"
+                                            data-price="150.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="chicken-pizza-18437">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/cloV6WBuR1cghoMduXJr6j5CGY63BTNoWoxyazIV.jpg"
+                            alt="Chicken Pizza">
+                        <h2 class="ul-section-title">Chicken Pizza (2)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/DgWAGEMmSo3c1kXvojXxiTF6gleZYWue177rxAiI.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314581"
+                                        onclick="openFullscreen('1314581')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Chicken Pizza</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Chicken pizza: lip-smacking!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 100</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314581" data-name="Chicken Pizza"
+                                            data-description="Chicken pizza: lip-smacking!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/DgWAGEMmSo3c1kXvojXxiTF6gleZYWue177rxAiI.png"
+                                            data-price="100.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/iGPALovlY0N1jIzH9KQtJ5MniWVkYTIGQKuvpl9f.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-2849888"
+                                        onclick="openFullscreen('2849888')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Medium pizaa</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Chicken</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 180</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="2849888" data-name="Medium pizaa"
+                                            data-description="Chicken"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/iGPALovlY0N1jIzH9KQtJ5MniWVkYTIGQKuvpl9f.png"
+                                            data-price="180.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="burgers-18437">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/VUO4IId4DeQAWWrq11jJZdiydWTjhX9cCTX095aw.jpg"
+                            alt="Burgers">
+                        <h2 class="ul-section-title">Burgers (2)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/eBnObwl8RfUnFXR5A3MGP1JMfBfcsL1UO2DuDCeK.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314582"
+                                        onclick="openFullscreen('1314582')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Veggie Burger</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Veggie burger: yummy!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 40</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314582" data-name="Veggie Burger"
+                                            data-description="Veggie burger: yummy!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/eBnObwl8RfUnFXR5A3MGP1JMfBfcsL1UO2DuDCeK.png"
+                                            data-price="40.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/60jtBhDAj7lwAzkiMFUuP6uHPGWXOGQG3uIdLu2H.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314583"
+                                        onclick="openFullscreen('1314583')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Chicken Burger</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Chicken burger: juicy!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 65</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314583" data-name="Chicken Burger"
+                                            data-description="Chicken burger: juicy!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/60jtBhDAj7lwAzkiMFUuP6uHPGWXOGQG3uIdLu2H.png"
+                                            data-price="65.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="snacks-beverages-18437">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/3uW0sbFxuX3VUzJjO0qYhN9JziZchFJxTQyrNk7B.jpg"
+                            alt="Coffee">
+                        <h2 class="ul-section-title">Coffee (3)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/XIibKLrsZxcbljTIkTeiPrs9dqtbi7pan0fojqgi.jpg"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314585"
+                                        onclick="openFullscreen('1314585')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Hot Coffee</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Hot Coffee: perfect brew!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 20</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314585" data-name="Hot Coffee"
+                                            data-description="Hot Coffee: perfect brew!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/categories/XIibKLrsZxcbljTIkTeiPrs9dqtbi7pan0fojqgi.jpg"
+                                            data-price="20.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/wZ17As4r4tr1OtZIM11en02CBFWmRuXxlU5grSFW.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1314586"
+                                        onclick="openFullscreen('1314586')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Cold Coffee</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Cold Coffee: chilled delight!</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 40</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1314586" data-name="Cold Coffee"
+                                            data-description="Cold Coffee: chilled delight!"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/wZ17As4r4tr1OtZIM11en02CBFWmRuXxlU5grSFW.png"
+                                            data-price="40.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/FnZk7p2IZE5fTIaDNLA2v8T1OZsBvG4sgppaZmh3.jpg"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-2745780"
+                                        onclick="openFullscreen('2745780')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">Hot butter coffee ☕</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">Amul test</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 30</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="2745780"
+                                            data-name="Hot butter coffee ☕" data-description="Amul test"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/FnZk7p2IZE5fTIaDNLA2v8T1OZsBvG4sgppaZmh3.jpg"
+                                            data-price="30.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="chicken-salad">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/lYJp8UFc5YgovpJ3YXDnF1dT7PbQFYXf7CEH58EA.png"
+                            alt="chicken salad diet for jim">
+                        <h2 class="ul-section-title">chicken salad diet for jim (2)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/1aP0ZUHzL4lEwAL99CNeFdux65hsToND8w2mWg1u.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1319257"
+                                        onclick="openFullscreen('1319257')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">boiled chicken salad</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">200gm</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 130</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1319257"
+                                            data-name="boiled chicken salad" data-description="200gm"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/1aP0ZUHzL4lEwAL99CNeFdux65hsToND8w2mWg1u.png"
+                                            data-price="130.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/1aP0ZUHzL4lEwAL99CNeFdux65hsToND8w2mWg1u.png"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1319260"
+                                        onclick="openFullscreen('1319260')">
+                                </div>
+                                <div class="product-details" style="background: rgb(254 243 213);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/non-veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">boiled chicken salad</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">100gm</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 65</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1319260"
+                                            data-name="boiled chicken salad" data-description="100gm"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/1aP0ZUHzL4lEwAL99CNeFdux65hsToND8w2mWg1u.png"
+                                            data-price="65.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-wise-item  my-3" id="cold-dring">
+                        <img src="https://scanmenu.in/restaurant/public/storage/uploads/categories/ZgW6xK3PD0j4YHcHuS4vvXURfRNxoEYgwXTWgYOm.jpg"
+                            alt="Cold Dring">
+                        <h2 class="ul-section-title">Cold Dring (1)</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="product-card mb-3">
+                                <div class="product-image">
+                                    <img src="https://scanmenu.in/restaurant/public/storage/uploads/items/smTP8JvXCOMNGIU4Am80bVP8WyrTHzAYLFlJ0St4.jpg"
+                                        class="img-fluid" alt="Menu Item Image" id="myImage-1371777"
+                                        onclick="openFullscreen('1371777')">
+                                </div>
+                                <div class="product-details" style="background: rgb(248 251 234);">
+
+                                    <div class="d-flex align-items-center title-row">
+                                        <div class="veg-icon me-2"><img
+                                                src="https://scanmenu.in/restaurant/public/frontend-assets/img/veg-icon.png"
+                                                alt="Veg Image" style="height:15px;width:15px;" /> </div>
+
+                                        <h5 class="product-title mb-0">campa</h5>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center product-price-desc">
+                                        <p class="product-desc mb-1">500 ml</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center"
+                                        style="margin-left: 20px;">
+
+                                        <h4 class="product-price mb-0">₹ 20</h4>
+
+
+                                        <button class="add-to-cart-btn" data-id="1371777" data-name="campa"
+                                            data-description="500 ml"
+                                            data-image="https://scanmenu.in/restaurant/public/storage/uploads/items/smTP8JvXCOMNGIU4Am80bVP8WyrTHzAYLFlJ0St4.jpg"
+                                            data-price="20.00" data-charge="0" onclick="handleSingleProduct(this)">
+                                            <i class="flaticon-grocery-store flaticon mr-4"></i>
+                                            <span>ADD</span>
+                                        </button>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <a href="" id="floatingBtn" data-orderId="" data-order-url="" class="btn btn-primary floating-btn"
+            style="display: none;">View Order</a>
+
+
+        <div class="modal fade" data-bs-backdrop='static' id="productModal" tabindex="-1"
+            aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close float-end text-danger" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12" style="display: flex;gap:20px;">
+                                <div class="col-3">
+                                    <img id="productImage" src="" alt="Product Image" class="img-fluid">
+                                </div>
+                                <div class="col-9">
+                                    <h5 id="productName" style="font-weight: 600;"></h5>
+                                    <p id="productDescription" class="text-muted"></p>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-sm-6 mt-3">
+                                <div class="d-flex align-items-center gap-2 mb-3 quantity-container">
+                                    <label class="quantity-label text-muted">Quantity</label>
+                                    <button class="btn btn-outline-secondary btn-sm quantity-btn"
+                                        id="decreaseQuantity">-</button>
+                                    <input type="number" id="productQuantity" value="1" min="1"
+                                        class="form-control text-center quantity-input" disabled>
+                                    <button class="btn btn-outline-secondary btn-sm quantity-btn"
+                                        id="increaseQuantity">+</button>
+                                </div>
+
+                                <div>
+                                    <label class="text-muted" id="variantTitle">Types:</label>
+                                    <div id="productVariants" class="mb-3">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="filter-item" id="addToCartButton">Add to Cart - ₹ 0</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="cartSidebar" class="cart-sidebar">
+        </div>
+
+
+        <div class="modal" id="checkoutModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="customerDetailsForm">
+                            <div class="mb-3">
+                                <label for="customerName" class="form-label">Name</label>
+                                <input type="text" id="customerName" name="customerName" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="customerMobile" class="form-label">Mobile</label>
+                                <input type="text" id="customerMobile" name="customerMobile" maxlength="10"
+                                    class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="mb-3 position-relative">
+                                    <label for="customerAddress" class="form-label">Address</label>
+                                    <input type="text" id="customerAddress" name="customerAddress" class="form-control"
+                                        disabled required>
+                                    <input type="hidden" id="latitude" name="latitude" class="form-control">
+                                    <input type="hidden" id="longitude" name="longitude" class="form-control">
+
+                                    <div class="spinner-border spinner-loader d-none" role="status"
+                                        style="position: absolute; top: 40px; right: 10px; width: 1.5rem; height: 1.5rem; color:#F0A014;">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <div class="location-fetch"
+                                        style="position: absolute; top: 40px; right: 10px; width: 1.5rem; height: 1.5rem; color:#F0A014;">
+                                        <i class="fa fa-location-crosshairs" onclick="fetchAddressWithPermission()"
+                                            style="color:#F0A014;"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+                            <button type="button" class="btn btn-primary" id="submitOrder">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="thankYouModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 360px; margin: 0 auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thank You!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <!-- Add your GIF here -->
+                        <img class="w-25 mx-auto mb-3" src="https://demo.foodscan.xyz/images/cart/confirm.gif"
+                            alt="Order Confirmation GIF">
+
+                        <p>Your order has been placed successfully.</p>
+
+                        <a href="#" class="btn btn-primary w-100 rounded-3xl py-3" id="thankYouCloseBtn"
+                            onclick="redirectToPage(event, this.href)">
+                            Order Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="minOrderValueModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 360px; margin: 0 auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="expiryImage"
+                            src="https://scanmenu.in/restaurant/public/frontend-assets/img/minimum-order.png"
+                            alt="Plan Expired">
+                        <h4 style="font-weight: 800;">Important Notice</h4>
+                        <p id="min-order-text-value">Minimum order value is 100, Please add more item to checkout</p>
+                        <button class="btn btn-primary w-100 rounded-3xl" id="minOrderValueCloseBtn"
+                            style="align-items: center;text-align: center;max-height: 45px;max-width: 29%;">
+                            Add Item
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="temporaryNotAvailableModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 360px; margin: 0 auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img style="height: 250px;" id="expiryImage"
+                            src="https://scanmenu.in/restaurant/public/frontend-assets/img/closed.png"
+                            alt="Plan Expired">
+                        <h4 style="font-weight: 800;">Oops! Kitchen’s Closed</h4>
+                        <p id="check-temporary-text">We’re not taking orders at the moment.</p>
+                        <p style="margin-top:0px;">Thank you for your patience!.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="restaurantRadiusModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 360px; margin: 0 auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Oops! You're Just Out of Reach!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img style="height: 200px;"
+                            src="https://scanmenu.in/restaurant/public/frontend-assets/img/distance-image.png"
+                            alt="Plan Expired">
+
+                        <p id="restaurant-radius-text" style="margin-top:0px;">To ensure fresh and timely service, this
+                            restaurant can only accept orders within range.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal" id="pinVerifyModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 360px; margin: 0 auto;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update Order</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <form id="pinVerifyForm">
+                            <div class="mb-3">
+                                <label for="mobile_no" class="form-label">
+                                    Please enter your mobile number to add items in your existing order.
+                                </label>
+                                <input type="number" id="mobile_no" name="mobile_no" class="form-control" required>
+                                <input type="hidden" id="orderCode" name="orderCode">
+                                <input type="hidden" id="orderDataType" name="orderDataType" class="form-control"
+                                    value="fresh">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="pinVerifyFormSubmitBtn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fullScreenLoader"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.8); z-index: 9999; display: flex; justify-content: center; align-items: center;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div class="fullscreen-modal" id="fullscreenModal">
+
+            <img src="" alt="Full View" id="fullscreenImage">
+        </div>
+
+
+
+
+
+
+
+
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <!--
+    <footer class="ul-footer">
+        <div class="ul-footer-bottom">
+            <div class="ul-container">
+                <div class="ul-footer-bottom-wrapper">
+                    <p class="copyright-txt">&copy;
+                        <script>document.write(new Date().getFullYear())</script> DigiChakra. All rights reserved
+                    </p>
+                    <div class="ul-footer-bottom-nav"><a href="#">Terms & Conditions</a> <a href="#">Privacy Policy</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>  -->
+
+
+    <footer class="ul-footer">
+        <!-- <div class="footer-image">
+            <img id="whatsappFooter" src="https://scanmenu.in/restaurant/public/frontend-assets/footer.png"
+                alt="Footer Image" style="cursor: pointer;">
+        </div> -->
+        <div>
+            <p>Contact for Design <strong>+91 75009 18652</strong></p>
+        </div>
+    </footer>
+
+    <!-- FOOTER SECTION END -->
+
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <!-- libraries JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+        src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/splide/splide.min.js"></script>
+    <script
+        src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/splittype/index.min.js"></script>
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/mixitup/mixitup.min.js"></script>
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/vendor/fslightbox/fslightbox.js"></script>
+
+    <!-- custom JS -->
+    <script src="https://scanmenu.in/restaurant/public/frontend-assets/js/main.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+
+    <script>
+        window.currencyConfig = {
+            symbol: "₹",
+            position: "left"
+        };
+
+        //   function formatCurrency(amount) {
+        //     const symbol = window.currencyConfig?.symbol || '₹';
+        //     const position = window.currencyConfig?.position || 'left';
+        //     amount = parseInt(amount);
+
+        //     return position === 'right'
+        //         ? `${amount} ${symbol}`
+        //         : `${symbol} ${amount}`;
+        // }
+
+        function formatCurrency(amount) {
+            const symbol = window.currencyConfig?.symbol || '₹';
+            const position = window.currencyConfig?.position || 'left';
+
+            amount = Number(amount);
+
+            let formatted;
+
+            if (amount % 1 === 0) {
+                // No decimal
+                formatted = amount.toLocaleString();
+            } else {
+                // Has decimal → ALWAYS 2 digits
+                formatted = amount.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+            }
+
+            return position === 'right'
+                ? `${formatted} ${symbol}`
+                : `${symbol} ${formatted}`;
+        }
+
+
+
+    </script>
+
+
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-bottom-right", // Position at the bottom right
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+
+        var tableName = "table-1";
+        var restaurantId = "ZDhmYmJiNTM4MzliMDYyMEY1Ri85aDdubFRrT0Q0L0FHQk4xc1E9PQ==";
+
+        document.getElementById('fullScreenLoader').style.display = 'none';
+
+        function handleSingleProduct(button) {
+            const id = button.dataset.id;
+            const name = button.dataset.name;
+            const description = button.dataset.description;
+            const image = button.dataset.image;
+            const price = button.dataset.price;
+            const charge = button.dataset.charge;
+
+            singleProduct(id, name, description, image, price, charge);
+        }
+
+        function singleProduct(id, name, description, image, price, isTemporary = 0) {
+
+            if (isTemporary === '1') {
+                $("#check-temporary-text").text('We’re not taking orders at the moment.');
+                $("#temporaryNotAvailableModal").modal('show');
+                return false;
+            }
+
+            $('#productName').text(name);
+            image = image || "https://scanmenu.in/restaurant/public/assets/images/item_placeholder.jpg";
+            $('#productImage').attr('src', image);
+            $('#productDescription').text(description);
+
+            let checkVarientLoad = false;
+
+            // Hide "Add to Cart" button initially
+            $('#addToCartButton').hide();
+
+            //${variant.name} - ₹${parseInt(variant.price)}
+
+            // Fetch product variants from API
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/product-variants/${id}`,
+                type: 'GET',
+                success: function (response) {
+                    // console.log(response);
+                    let variantsHtml = '';
+
+                    if (response.length > 0) {
+                        checkVarientLoad = true;
+
+                        response.forEach((variant, index) => {
+                            variantsHtml += `
+                            <button class="btn ${index === 0 ? 'btn-primary' : 'btn-outline-primary'} variant-option" 
+                                    data-id="${variant.id}" 
+                                    data-item-id="${variant.item_id}" 
+                                    data-price="${variant.price}">
+                                ${variant.name} - ${formatCurrency(variant.price)}
+                            </button>
+                        `;
+                        });
+
+                        // Show "Add to Cart" button only if variants exist
+                        $('#addToCartButton').show();
+                    } else {
+                        checkVarientLoad = false;
+                        $('#addToCartButton').hide();
+                    }
+
+                    $('#productVariants').html(variantsHtml);
+
+                    // Set the initial price based on the first variant (if exists)
+                    const firstVariantPrice = response.length > 0 ? response[0].price : 0;
+                    $('#productPrice').text(formatCurrency(price));
+                    $('#addToCartButton').text('Add to Cart - ' + formatCurrency(firstVariantPrice));
+                    $('#productVariants .variant-option').first().addClass('active');
+                },
+                error: function () {
+                    $('#productModal .modal-body').html('<p>Error loading product variants.</p>');
+                    console.log('error');
+                    $('#addToCartButton').hide();
+                }
+            });
+
+            // getAddons(id);
+
+            // Reset quantity
+            $('#productQuantity').val(1);
+
+            // Show modal
+            $('#productModal').modal('show');
+        }
+
+
+        // Variant selection handler
+        $(document).on('click', '.variant-option', function () {
+            $('.variant-option').removeClass('btn-primary').addClass('btn-outline-primary');
+            $(this).addClass('btn-primary').removeClass('btn-outline-primary');
+
+            // Update price based on selected variant
+            const price = $(this).data('price');
+            const quantity = $('#productQuantity').val();
+            const totalPrice = price * quantity;
+            // $('#productPrice').text('₹ ' + totalPrice.toFixed(2));
+            // $('#addToCartButton').text('Add to Cart - ' + formatCurrency(totalPrice.toFixed(0)));
+            $('#addToCartButton').text('Add to Cart - ' + formatCurrency(totalPrice));
+        });
+
+        // Quantity adjustment handlers
+        $('#decreaseQuantity').on('click', function () {
+            const quantity = Math.max(1, parseInt($('#productQuantity').val()) - 1);
+            $('#productQuantity').val(quantity).trigger('input');
+        });
+
+        $('#increaseQuantity').on('click', function () {
+            const quantity = parseInt($('#productQuantity').val()) + 1;
+            $('#productQuantity').val(quantity).trigger('input');
+        });
+
+        $(document).on('input', '#productQuantity', function () {
+            const price = $('.variant-option.btn-primary').data('price') || 0;
+            const quantity = Math.max(1, parseInt($(this).val()));
+            const totalPrice = price * quantity;
+            // $('#productPrice').text(formatCurrency(totalPrice.toFixed(0)));
+            $('#productPrice').text(formatCurrency(totalPrice));
+            // $('#addToCartButton').text('Add to Cart - ' + formatCurrency(totalPrice.toFixed(0)));
+            $('#addToCartButton').text('Add to Cart - ' + formatCurrency(totalPrice));
+        });
+
+        // Add to Cart functionality
+        $('#addToCartButton').on('click', function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            const item_id = $('.variant-option.btn-primary').data('item-id');
+            const item_varient_id = $('.variant-option.btn-primary').data('id');
+            const quantity = $('#productQuantity').val();
+            const price = $('.variant-option.btn-primary').data('price');
+
+            // const totalItemPrice = price * quantity;
+
+            const addon_data = Object.entries(selectedAddons).map(([addon_id, qty]) => ({ addon_id, qty }));
+
+            // const totalItemPrice = parseFloat($('#productPrice').text().replace('₹ ', ''));
+            const rawText = $('#productPrice').text();
+            const totalItemPrice = parseFloat(rawText.replace(/[^\d.]/g, '')) || 0;
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/add-to-cart`,
+                type: 'POST',
+                data: {
+                    item_varient_id: item_varient_id,
+                    item_id: item_id,
+                    quantity: quantity,
+                    item_price: price,
+                    tableName: tableName,
+                    restaurant_id: restaurantId,
+                    // total_price:totalItemPrice.toFixed(2),
+                    total_price: totalItemPrice,
+                    user_device_id: getDeviceId(),
+                    addons: addon_data
+                },
+                success: function () {
+                    updateCartCounter();
+                    toastr.success('Item added to the cart', 'Item Added!');
+                    flyToCartAnimation('#productImage', '#openCart');
+
+                    setTimeout(() => {
+                        $('#productModal').modal('hide');
+                    }, 2000);
+
+                    // $('#productModal').modal('hide');
+                },
+                error: function () {
+                    alert('Error adding item to cart.');
+                }
+            });
+        });
+
+        // Function to get device ID (fallback to IP)
+        function getDeviceId() {
+            if (localStorage.getItem('device_id')) {
+                return localStorage.getItem('device_id');
+            } else {
+                const deviceId = 'device_' + Math.random().toString(36).substring(2);
+                localStorage.setItem('device_id', deviceId);
+                return deviceId;
+            }
+        }
+
+        // Open Cart Sidebar
+        $(document).on("click", "#openCart", function () {
+            $("#cartSidebar").addClass("open");
+
+            let ONLINE = "1"
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/cart-items?device_id=${getDeviceId()}&user_id=${restaurantId}&is_online=${ONLINE}`,
+                type: "GET",
+                success: function (response) {
+                    $("#cartSidebar").html(response);
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+
+        // Close Cart Sidebar
+        $(document).on("click", "#closeCart", function () {
+            $("#cartSidebar").removeClass("open");
+        });
+
+        $(document).on('click', '.update-cart', function () {
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            let action = $(this).data('action'); // 'increase' or 'decrease'
+            let itemId = $(this).data('item-id');
+            let itemVarientId = $(this).data('item-varient-id');
+            let isOnline = Number("1");
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/update-cart`,
+                type: 'POST',
+                data: {
+                    action: action,
+                    item_id: itemId,
+                    item_varient_id: itemVarientId,
+                    device_id: getDeviceId(),
+                    user_id: restaurantId,
+                    is_online: isOnline
+                },
+                success: function (response) {
+                    if (response.status === 'success') {
+                        updateCartCounter();
+                        // $(".cart-total-price").val('<b>₹' + response.total_price+'</b>');
+                        $('#cartSidebar').html(response.html); // Update cart HTML
+                    } else {
+                        alert(response.message || 'Something went wrong!');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                    alert('Failed to update the cart. Please try again.');
+                }
+            });
+        });
+
+
+        function updateCartCounter() {
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/cart-items-count?device_id=${getDeviceId()}&user_id=${restaurantId}`, // Create a separate API to return the item count only
+                type: 'GET',
+                success: function (response) {
+                    if (response.status === 'success') {
+                        $('#cart-counter').text(response.totalItemCount); // Update the cart counter
+                        $('#new-cart-counter').text(response.totalItemCount); // Update the cart counter
+                        $("#new-cart-amount").text(response.totalItemPrice);
+
+                        updateCartData(response.totalItemCount, response.totalItemPrice);
+                    } else {
+                        console.error('Failed to fetch cart count:', response.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching cart count:', error);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            updateCartCounter(); // Update the counter on page load
+        });
+
+
+        $(document).on('click', '.proceedToCheckout', function () {
+            $("#cartSidebar").removeClass("open");
+            let existingOrderId = $("#floatingBtn").attr('data-orderId');
+            if ("") {
+                // $("#orderDataType").val('renewal');
+                // $("#pinVerifyModal").modal('show');
+
+                console.log("Step 1");
+
+                if (existingOrderId && "1" && "no" == 'no') {
+                    console.log("Step 7");
+                    $("#orderDataType").val('renewal');
+                    $("#pinVerifyModal").modal('show');
+                } else {
+                    console.log("Step 8");
+                    getCustomerDetail();
+                    $('#checkoutModal').modal('show');
+                }
+            } else {
+
+                console.log("Step 2");
+
+                let isOnline = Number("1");
+                let subTotalAmount = Number($(".cart-subtotal-price").attr('data-subtotal'));
+
+                if (!isWithinTimeRange() && isOnline === 1) {
+
+                    console.log("Step 3");
+
+                    let startTime = "10:00 AM";
+                    let endTime = "11:00 PM";
+
+                    console.log(startTime, endTime);
+
+                    $("#check-temporary-text").text(`We accept orders only during our open hours.
+                ⏰ Timings: ${startTime} to ${endTime}`);
+                    $("#temporaryNotAvailableModal").modal('show');
+                    return false;
+                }
+
+                if ("0" === "1" && isOnline === 1) {
+                    console.log("Step 4");
+
+                    $("#check-temporary-text").text('We’re not taking orders at the moment.');
+                    $("#temporaryNotAvailableModal").modal('show');
+                    return false;
+                }
+
+
+                if (typeof subTotalAmount !== 'number' || isNaN(subTotalAmount)) {
+                    console.log("Step 5");
+                    subTotalAmount = Number($(".cart-total-price").attr('data-subtotal'));
+                }
+
+                let minOrderValue = Number("150");
+
+                // console.log('online:', isOnline, 'subtotal:', subTotalAmount, 'minOrder:', minOrderValue);
+                // $('#checkoutModal').modal('show');
+                if (isOnline === 1 && subTotalAmount < minOrderValue) {
+
+                    console.log("Step 6");
+
+                    $("#min-order-text-value").text(`Minimum order value is ${formatCurrency(minOrderValue)}, Please add more item to checkout.`);
+                    $("#minOrderValueModal").modal('show');
+                } else {
+                    console.log("Step 8");
+                    getCustomerDetail();
+                    $('#checkoutModal').modal('show');
+                }
+            }
+        });
+
+        $("#customerMobile").on("input", function () {
+            $(this).val($(this).val().replace(/[^0-9]/g, '').slice(0, 10));
+        });
+
+        $(document).on('click', '#submitOrder', function () {
+
+            let name = $('#customerName').val().trim();
+            let mobile = $('#customerMobile').val().trim();
+            let address = $('#customerAddress').val() || null;
+            let isOnline = "true" || 'false';
+
+            let isValid = true;
+
+            // Validate Name
+            if (!/^[a-zA-Z\s]{2,}$/.test(name)) {
+                toastr.error('Please enter a valid name (at least 2 characters, only alphabets and spaces).', 'Alert');
+                isValid = false;
+            }
+
+            // Validate Mobile Number
+            if (!/^\d{10}$/.test(mobile)) {
+                toastr.error('Please enter a valid 10-digit mobile number.', 'Alert');
+                isValid = false;
+            }
+
+            if (isOnline === 'true' && "1" === "1") {
+                if (!address) {
+                    toastr.error('Please enter address.', 'Alert');
+                    isValid = false;
+                }
+            }
+
+            if (isValid) {
+
+                document.getElementById('fullScreenLoader').style.display = 'flex';
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                const customerName = $('#customerName').val();
+                const customerMobile = $('#customerMobile').val();
+                const customerAddress = $('#customerAddress').val() || null;
+                const tableSlug = $('#table_id').val() || tableName;
+
+                const customerLatitude = $('#latitude').val() || null;
+                const customerLongitude = $('#longitude').val() || null;
+                const customerRemark = $('#customerRemark').val() || null;
+                const customerRemark2 = $('#customerRemark2').val() || null;
+                const customerRemark3 = $('#customerRemark3').val() || null;
+
+                $.ajax({
+                    url: `https://scanmenu.in/restaurant/api/create-order`,
+                    type: 'POST',
+                    data: {
+                        device_id: getDeviceId(),
+                        customer_name: customerName,
+                        customer_mobile: customerMobile,
+                        // table_slug:tableName,
+                        table_slug: tableSlug,
+                        user_id: restaurantId,
+                        customer_address: customerAddress,
+                        is_online: isOnline,
+                        latitude: customerLatitude,
+                        longitude: customerLongitude,
+                        customer_remark: customerRemark,
+                        customer_remark2: customerRemark2,
+                        customer_remark3: customerRemark3,
+                    },
+                    success: function (response) {
+
+                        document.getElementById('fullScreenLoader').style.display = 'none';
+
+                        if (response.status === 'error' && response.is_radius === 'yes') {
+                            $('#checkoutModal').modal('hide');
+                            // $("#customer-distance-text").text(`📍 Your Distance: ~${response.customer_distance}KM`);
+                            $("#restaurant-radius-text").text(`To ensure fresh and timely service, this restaurant can only accept orders within range : ${response.rastaurant_redius}KM`);
+
+                            $("#restaurantRadiusModal").modal('show');
+                            // toastr.error(response.message,"Alert!");
+                            return false;
+                        }
+
+                        if (response.status === 'success') {
+                            $('#checkoutModal').modal('hide');
+                            $('#thankYouModal').modal('show');
+                            updateCartCounter();
+                            showOnlineViewOrder();
+                            $("#thankYouModal #thankYouCloseBtn").attr('href', response.return_url);
+                            setTimeout(() => {
+                                window.location.href = response.return_url;
+                            }, 2000);
+                        } else {
+                            alert(response.message || 'Failed to place the order.');
+                        }
+                    }, error: function (xhr, status, error) {
+                        document.getElementById('fullScreenLoader').style.display = 'none';
+                        console.error('Error placing order:', error);
+                    }
+                });
+            }
+        });
+
+        $(document).on('click', '#callWaiter', function (e) {
+            e.preventDefault();
+
+            const button = this;
+
+            // Disable the button and update the text
+            button.disabled = true;
+            button.innerHTML = `<i class="fa fa-bell" style="font-size:20px;"></i> Wait 60s`;
+
+            // Wait for 60 seconds
+            let countdown = 60;
+            const interval = setInterval(() => {
+                countdown--;
+                button.innerHTML = `<i class="fa fa-bell" style="font-size:20px;"></i> Wait ${countdown}s`;
+
+                if (countdown === 0) {
+                    clearInterval(interval);
+                    button.disabled = false;
+                    button.innerHTML = `<i class="fa fa-bell" style="font-size:20px;"></i> Call Waiter`;
+                }
+            }, 1000);
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/push-order-notification?slug=${tableName}&user_id=${restaurantId}`, // Create a separate API to return the item count only
+                type: 'GET',
+                success: function (response) {
+                    toastr.success('एक मिनट में Waiter आ जाएगा.', 'Success!');
+                    // toastr.success('Notification send to waiter successfully.', 'Success!');
+                },
+                error: function (xhr, status, error) {
+                    toastr.success('एक मिनट में Waiter आ जाएगा.', 'Success!');
+                    console.error('Error fetching:', xhr);
+                }
+            });
+        });
+
+
+        let selectedCategory = null;
+        let selectedItemType = null;
+
+        function setCategory(categoryId, catName) {
+            selectedCategory = categoryId;
+            applyFilters();
+            $("#menu-name").text(catName || "Today's Menu");
+        }
+
+        function setItemType(itemType) {
+            selectedItemType = itemType;
+            applyFilters();
+        }
+
+        function applyFilters() {
+            document.getElementById('fullScreenLoader').style.display = 'flex';
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/filter-items`,
+                method: 'POST',
+                data: {
+                    categoryId: selectedCategory,
+                    restaurantId: restaurantId,
+                    itemType: selectedItemType,
+                },
+                success: function (response) {
+                    $('#itemsContainer').html(response.html);
+                    document.getElementById('fullScreenLoader').style.display = 'none';
+                },
+                error: function () {
+                    alert('Failed to filter items. Please try again.');
+                    document.getElementById('fullScreenLoader').style.display = 'none';
+                }
+            });
+        }
+
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        // Clone the first slide and append to end
+        const firstClone = slides[0].cloneNode(true);
+        slider.appendChild(firstClone);
+
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function moveToNext() {
+            index++;
+            slider.style.transition = "transform 0.6s ease-in-out";
+            slider.style.transform = `translateX(-${index * 100}%)`;
+
+            // When reaching the cloned slide, reset instantly to real first
+            if (index === totalSlides - 1) {
+                setTimeout(() => {
+                    slider.style.transition = "none"; // disable animation for jump
+                    index = 0; // reset index
+                    slider.style.transform = `translateX(0)`;
+                }, 600); // match transition duration
+            }
+        }
+
+        // Auto move every 3 seconds
+        setInterval(moveToNext, 3000);
+
+
+    </script>
+
+    <script>
+        function openFullscreen(id) {
+            const modal = document.getElementById("fullscreenModal");
+            const fullImage = document.getElementById("fullscreenImage");
+            //const image = document.querySelector(`img[onclick="openFullscreen(${id})"]`);
+            var image = document.getElementById("myImage-" + id);
+
+            fullImage.src = image.src;
+            modal.style.display = "flex";
+        }
+
+        function closeFullscreen() {
+            const modal = document.getElementById("fullscreenModal");
+            modal.style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("a[href^='#']").forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault(); // Prevent default anchor behavior
+
+                    let targetId = this.getAttribute("href").substring(1); // Get ID without #
+                    let targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        let offset = 100; // Adjust this value based on your sticky header height
+                        let elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+                        window.scrollTo({
+                            top: elementPosition - offset,
+                            behavior: "smooth" // Enables smooth scrolling
+                        });
+                    }
+                });
+            });
+        });
+
+        $(document).mouseup(function (e) {
+            closeFullscreen();
+        });
+
+        function redirectToPage(event, url) {
+            event.preventDefault();
+            window.location.href = url;
+        }
+
+        // $(document).on('click',"#floatingBtn",function() {
+        //     $("#pinVerifyModal").modal('show');
+        // });
+
+        // $(document).on("submit","#pinVerifyForm",function(e) {
+        //     e.preventDefault();
+        //     document.getElementById('fullScreenLoader').style.display = 'flex';
+
+        //     $.ajaxSetup({
+        //         headers: {
+        //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //         }
+        //     });
+
+        //     $.ajax({
+        //         url: `https://scanmenu.in/restaurant/verify-pin`,
+        //         method: 'POST',
+        //         data: {
+        //             order_id: $("#floatingBtn").attr('data-orderId'),
+        //             order_code: $("#orderCode").val(),
+        //             order_type: $("#orderDataType").val(),
+        //             user_device_id: getDeviceId(),
+        //             table_slug: tableName,
+        //             user_id: restaurantId,
+        //         },
+        //         success: function (response) {
+        //             document.getElementById('fullScreenLoader').style.display = 'none';
+        //             if($("#orderDataType").val() === 'renewal') {
+        //                 $("#pinVerifyModal").modal('hide');
+        //                 $('#thankYouModal').modal('show');
+        //                 updateCartCounter(); 
+        //                 $("#thankYouModal #thankYouCloseBtn").attr('href',response.return_url);
+        //             }else{
+        //                 window.location.href = $("#floatingBtn").attr('data-order-url');
+        //             }
+        //         },
+        //         error: function (xhr,status,error) {
+        //             document.getElementById('fullScreenLoader').style.display = 'none';
+        //             toastr.error(xhr.responseJSON.message, 'Error!');
+        //             console.log(xhr);
+        //         }
+        //     });
+        // });
+
+        $("#mobile_no").on("input", function () {
+            $(this).val($(this).val().replace(/[^0-9]/g, '').slice(0, 10));
+        });
+
+        $(document).on("submit", "#pinVerifyForm", function (e) {
+            e.preventDefault();
+            document.getElementById('fullScreenLoader').style.display = 'flex';
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/verify-pin`,
+                method: 'POST',
+                data: {
+                    order_id: $("#floatingBtn").attr('data-orderId'),
+                    order_code: $("#orderCode").val(),
+                    order_type: $("#orderDataType").val(),
+                    user_device_id: getDeviceId(),
+                    table_slug: tableName,
+                    user_id: restaurantId,
+                    customer_mobile: $("#mobile_no").val()
+                },
+                success: function (response) {
+                    document.getElementById('fullScreenLoader').style.display = 'none';
+                    if ($("#orderDataType").val() === 'renewal') {
+                        $("#pinVerifyModal").modal('hide');
+                        $('#thankYouModal').modal('show');
+                        updateCartCounter();
+                        $("#thankYouModal #thankYouCloseBtn").attr('href', response.return_url);
+                    } else {
+                        window.location.href = $("#floatingBtn").attr('data-order-url');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    document.getElementById('fullScreenLoader').style.display = 'none';
+                    toastr.error(xhr.responseJSON.message, 'Alert!');
+                    console.log(xhr);
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     let floatingBtn = document.getElementById("floatingBtn");
+        //     let lastScrollY = window.scrollY;
+
+        //     window.addEventListener("scroll", function() {
+        //         if (window.scrollY > lastScrollY) {
+        //             // Scrolling Down → Keep it visible
+        //             floatingBtn.style.opacity = "1";
+        //             floatingBtn.style.transform = "translateX(-50%) translateY(0)";
+        //         } else {
+        //             // Scrolling Up → Keep it visible
+        //             floatingBtn.style.opacity = "1";
+        //             floatingBtn.style.transform = "translateX(-50%) translateY(0)";
+        //         }
+        //         lastScrollY = window.scrollY;
+        //     });
+        // });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let floatingBtn = document.getElementById("floatingBtn");
+
+            if (!floatingBtn) {
+                console.warn("floatingBtn element not found!");
+                return; // Stop execution if the button doesn't exist
+            }
+
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > lastScrollY) {
+                    // Scrolling Down → Keep it visible
+                    floatingBtn.style.opacity = "1";
+                    //floatingBtn.style.transform = "translateX(-50%) translateY(0)";
+                } else {
+                    // Scrolling Up → Keep it visible
+                    floatingBtn.style.opacity = "1";
+                    //floatingBtn.style.transform = "translateX(-50%) translateY(0)";
+                }
+                lastScrollY = window.scrollY;
+            });
+        });
+
+    </script>
+
+    <script>
+        function moveToNext(current, nextFieldId) {
+            let inputVal = current.value;
+            current.value = inputVal.replace(/[^0-9]/g, ''); // Allow only numbers
+
+            if (inputVal.length === 1 && nextFieldId) {
+                document.getElementById(nextFieldId).focus();
+            }
+
+            updateOrderCode(); // Update hidden input value
+        }
+
+        function updateOrderCode() {
+            let otp = "";
+            document.querySelectorAll('.otp-input').forEach(input => {
+                otp += input.value;
+            });
+            document.getElementById('orderCode').value = otp;
+        }
+    </script>
+
+    <script>
+        function getBrowserName() {
+            let userAgent = navigator.userAgent;
+
+            if (userAgent.includes("Chrome") && !userAgent.includes("Edg") && !userAgent.includes("OPR")) {
+                return "Chrome";
+            } else if (userAgent.includes("Firefox")) {
+                return "Firefox";
+            } else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
+                return "Safari";
+            } else if (userAgent.includes("OPR") || userAgent.includes("Opera")) {
+                return "Opera";
+            } else if (userAgent.includes("Edg")) {
+                return "Edge";
+            } else if (userAgent.includes("MSIE") || userAgent.includes("Trident")) {
+                return "Internet Explorer";
+            } else {
+                return "Unknown";
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            let analyticsData = {
+                browser: getBrowserName(),
+                browser_detail: navigator.userAgent,
+                device: /Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile" : "Desktop",
+                url: window.location.href,
+                referrer: document.referrer,
+                'user_device_id': getDeviceId(),
+                'restaurant_id': restaurantId,
+                'ip_address': "223.228.90.172",
+                latitude: null,
+                longitude: null,
+            };
+
+            // if ("geolocation" in navigator) {
+            //     navigator.geolocation.getCurrentPosition(
+            //         function (position) {
+            //             analyticsData.latitude = position.coords.latitude;
+            //             analyticsData.longitude = position.coords.longitude;
+            //             sendAnalyticsData(analyticsData);
+            //         },
+            //         function (error) {
+            //             console.warn("Location access denied or unavailable.");
+            //             sendAnalyticsData(analyticsData); // Send data even if location is not available
+            //         }
+            //     );
+            // } else {
+            //     console.warn("Geolocation not supported.");
+            //     sendAnalyticsData(analyticsData);
+            // }
+
+            sendAnalyticsData(analyticsData);
+
+        });
+
+        function sendAnalyticsData(data) {
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/save-analytics`,
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+                },
+                data: JSON.stringify(data),
+                success: function (response) {
+                    //    console.log(response);
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseJSON);
+                }
+            });
+        }
+    </script>
+    <!-- Start javascript code -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (!sessionStorage.getItem("popupShown")) {
+                document.getElementById("starterImagePopup").style.display = "flex";
+            } else {
+                document.getElementById("starterImagePopup").style.display = "none";
+            }
+        });
+
+        function closePopup() {
+            document.getElementById("starterImagePopup").style.display = "none";
+            sessionStorage.setItem("popupShown", "true");
+        }
+    </script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkoutModal = document.getElementById("checkoutModal");
+            const locationIcon = document.querySelector('.location-fetch');
+
+            checkoutModal.addEventListener("show.bs.modal", function () {
+                let isOnline = "true" === "true"; // Check if online ordering is enabled
+                let isAddressLableEnabled = "1" === "1";
+                if (isOnline && isAddressLableEnabled) {
+                    if (navigator.geolocation) {
+
+                        navigator.geolocation.getCurrentPosition(
+                            function (position) {
+                                const latitude = position.coords.latitude;
+                                const longitude = position.coords.longitude;
+
+                                // console.log("Latitude:", latitude, "Longitude:", longitude);
+                                $("#customerAddress").attr('disabled', true);
+                                $(".spinner-loader").removeClass('d-none');
+                                locationIcon.classList.add('d-none');
+
+                                // Reverse Geocode using OpenStreetMap's Nominatim API
+                                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                                    .then(response => response.json())
+                                    .then(data => {
+
+                                        $(".spinner-loader").addClass('d-none');
+                                        $("#customerAddress").attr('disabled', false);
+
+                                        if (data && data.display_name) {
+                                            document.getElementById("customerAddress").value = data.display_name;
+                                        } else {
+                                            console.error("Address not found");
+                                        }
+                                    })
+                                    .catch(error => console.error("Geocoding error:", error));
+
+                                // Store lat/lon in hidden fields (if needed)
+                                document.getElementById("latitude").value = latitude;
+                                document.getElementById("longitude").value = longitude;
+                            },
+                            function (error) {
+                                $("#customerAddress").attr('disabled', false);
+                                console.error("Error getting location:", error);
+                            },
+                            { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+                        );
+                        $(".spinner-loader").addClass('d-none');
+                    } else {
+                        $("#customerAddress").attr('disabled', false);
+                        console.error("Geolocation is not supported by this browser.");
+                    }
+                }
+            });
+        });
+
+        // function isSafariBrowser() {
+        //     return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        // }
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const checkoutModal = document.getElementById("checkoutModal");
+
+        //     checkoutModal.addEventListener("show.bs.modal", function () {
+        //         let isOnline = "true" === "true"; 
+        //         let isAddressLableEnabled = "1" === "1";
+
+        //         if (isOnline && isAddressLableEnabled) {
+        //             if (isSafariBrowser()) {
+        //                 // Only check and handle for Safari
+        //                 checkSafariLocationPermission();
+        //             } else {
+        //                 // Non-safari browsers, directly call geolocation
+        //                 getLocation();
+        //             }
+        //         }
+        //     });
+        // });
+
+        // function checkSafariLocationPermission() {
+        //     if (navigator.permissions) {
+        //         navigator.permissions.query({ name: 'geolocation' }).then(function (result) {
+        //             if (result.state === 'granted') {
+        //                 console.log('Safari: Location already granted.');
+        //                 getLocation(); // Fetch location directly
+        //             } else {
+        //                 console.log('Safari: Location not granted yet.');
+        //                 openLocationPermissionDialog(); // Show dialog only for Safari
+        //             }
+        //         }).catch(function (error) {
+        //             console.error('Safari Permissions API error:', error);
+        //             // Assume permission is not granted and open confirm
+        //             openLocationPermissionDialog();
+        //         });
+        //     } else {
+        //         console.log('Safari: No permissions API support. Show dialog.');
+        //         openLocationPermissionDialog();
+        //     }
+        // }
+
+        // function openLocationPermissionDialog() {
+        //     if (confirm('We need your location to autofill your address. Please allow location access.')) {
+        //         getLocation(); // Trigger actual geolocation request after user agrees
+        //     } else {
+        //         console.log('User declined location access.');
+        //     }
+        // }
+
+        // function getLocation() {
+        //     if (navigator.geolocation) {
+        //         $(".spinner-loader").removeClass('d-none');
+
+        //         navigator.geolocation.getCurrentPosition(
+        //             function (position) {
+        //                 const latitude = position.coords.latitude;
+        //                 const longitude = position.coords.longitude;
+
+        //                 $("#customerAddress").attr('disabled', true);
+
+        //                 fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+        //                     .then(response => response.json())
+        //                     .then(data => {
+        //                         $(".spinner-loader").addClass('d-none');
+        //                         $("#customerAddress").attr('disabled', false);
+
+        //                         if (data && data.display_name) {
+        //                             document.getElementById("customerAddress").value = data.display_name;
+        //                         } else {
+        //                             console.error("Address not found");
+        //                         }
+        //                     })
+        //                     .catch(error => {
+        //                         $(".spinner-loader").addClass('d-none');
+        //                         $("#customerAddress").attr('disabled', false);
+        //                         console.error("Geocoding error:", error);
+        //                     });
+
+        //                 document.getElementById("latitude").value = latitude;
+        //                 document.getElementById("longitude").value = longitude;
+        //             },
+        //             function (error) {
+        //                 $(".spinner-loader").addClass('d-none');
+        //                 $("#customerAddress").attr('disabled', false);
+
+        //                 console.error("Error getting location:", error);
+
+        //                 // if (error.code === error.PERMISSION_DENIED) {
+        //                 //     alert("You denied location permission. Please allow it from Safari settings.");
+        //                 // } else {
+        //                 //     alert("Unable to fetch location. Please ensure your location services are ON.");
+        //                 // }
+        //             },
+        //             { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+        //         );
+        //     } else {
+        //         $(".spinner-loader").addClass('d-none');
+        //         $("#customerAddress").attr('disabled', false);
+        //         alert("Geolocation is not supported by your browser.");
+        //     }
+        // }
+
+
+        $(document).on("click", "#minOrderValueCloseBtn", function () {
+            $("#minOrderValueModal").modal('hide');
+        });
+
+    </script>
+
+    <script>
+        function updateCartData(cartCount, totalAmount) {
+            let cartBtn = document.getElementById("floatingCartBtn");
+            let cartCounter = document.getElementById("new-cart-counter");
+            let cartAmount = document.getElementById("new-cart-amount");
+
+            if (cartCount > 0) {
+                cartBtn.classList.remove("hidden");
+                cartCounter.textContent = `${cartCount} Items`;
+                cartAmount.textContent = `₹ ${totalAmount}`;
+            } else {
+                // cartBtn.classList.add("hidden");
+            }
+        }
+
+
+        $(document).on("click", "#floatingCartBtn", function () {
+            $("#cartSidebar").addClass("open");
+
+            let ONLINE = "1"
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/cart-items?device_id=${getDeviceId()}&user_id=${restaurantId}&is_online=${ONLINE}`,
+                type: "GET",
+                success: function (response) {
+                    $("#cartSidebar").html(response);
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+
+
+        function getCustomerDetail() {
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/customer-details`,
+                type: "GET",
+                data: { user_device_id: getDeviceId() },
+                success: function (response) {
+                    //    console.log(response);
+                    if (response) {
+                        $("#customerName").val(response.customer_name);
+                        $("#customerMobile").val(response.customer_mobile);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        $("#floatingBtn").css("display", "none");
+
+        function showOnlineViewOrder() {
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/check-online-order`,
+                type: "GET",
+                data: { restaurant_id: restaurantId, user_device_id: getDeviceId() },
+                success: function (response) {
+                    if (response.status === 'success' && response.isView === true) {
+                        $("#floatingBtn").attr('href', response.url);
+                        $("#floatingBtn").attr('data-order-url', response.url);
+                        $("#floatingBtn").attr('data-orderId', response.order.id);
+                        $("#floatingBtn").css("display", "inline-block");
+                        // console.log(response);
+                    }
+                },
+                error: function (error) {
+                    $("#floatingBtn").css("display", "none");
+                    console.log("Error:", error);
+                }
+            });
+        }
+
+        showOnlineViewOrder();
+
+        function checkTemporaryAvailable() {
+            let isAvailable = false;
+            $.ajax({
+                url: "https://scanmenu.in/restaurant/api/check-temporary-available",
+                type: "GET",
+                data: { restaurant_id: restaurantId },
+                success: function (response) {
+                    if (response.status === 'success') {
+                        isAvailable = true;
+                    }
+                },
+                error: function (error) {
+                    console.log("Error:", error);
+                }
+            });
+
+            return isAvailable;
+        }
+
+        function isWithinTimeRange() {
+            let checkStartTime = "10:00:00"; // Format: HH:mm:ss
+            let checkEndTime = "23:00:00";     // Format: HH:mm:ss
+
+            // Check if the values are null or empty
+            if (!checkStartTime || !checkEndTime) {
+                return true; // Allow checkout by default if no times are set
+            }
+
+            // Get current time
+            let currentTime = new Date();
+            let currentHours = currentTime.getHours();
+            let currentMinutes = currentTime.getMinutes();
+
+            // Convert all time strings to total minutes
+            let [startHours, startMinutes] = checkStartTime.split(":").map(Number);
+            let [endHours, endMinutes] = checkEndTime.split(":").map(Number);
+
+            let startTotalMinutes = startHours * 60 + startMinutes;
+            let endTotalMinutes = endHours * 60 + endMinutes;
+            let currentTotalMinutes = currentHours * 60 + currentMinutes;
+
+            // Handle time range that crosses midnight
+            if (startTotalMinutes < endTotalMinutes) {
+                // Normal same-day range
+                if (currentTotalMinutes >= startTotalMinutes && currentTotalMinutes <= endTotalMinutes) {
+                    return true; // Within time range
+                }
+            } else {
+                // Crosses midnight: allow if after start OR before end
+                if (currentTotalMinutes >= startTotalMinutes || currentTotalMinutes <= endTotalMinutes) {
+                    return true;
+                }
+            }
+
+            console.log("Order cannot be placed outside working hours.");
+            return false; // Outside the allowed time
+        }
+
+    </script>
+
+    <script>
+        document.getElementById('CloseUnpaidOverlay').addEventListener('click', function () {
+            document.getElementById('UnpaidOverlay').style.display = 'none';
+        });
+    </script>
+
+    <script>
+        function fetchAddressWithPermission() {
+            const loader = document.querySelector('.spinner-loader');
+            const locationIcon = document.querySelector('.location-fetch');
+            const addressInput = document.getElementById('customerAddress');
+            const latInput = document.getElementById('latitude');
+            const lngInput = document.getElementById('longitude');
+
+            // UI updates
+            loader.classList.remove('d-none');
+            locationIcon.classList.add('d-none');
+            $(".location-fetch").addClass('d-none');
+            addressInput.value = "";
+
+            if (!navigator.geolocation) {
+                showLocationError("Geolocation is not supported by your browser.");
+                resetUI();
+                return;
+            }
+
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+
+                    latInput.value = lat;
+                    lngInput.value = lng;
+
+                    // Use Google Maps Geocoding API to get human-readable address
+                    fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            resetLoader();
+                            // console.log(data);
+                            const address = data.display_name || "Address not found";
+                            addressInput.value = address;
+
+                        })
+                        .catch(error => {
+                            console.error("Error fetching address:", error);
+                            addressInput.value = "Error fetching address";
+                            resetUI();
+                        });
+                },
+                function (error) {
+                    console.warn("Location error:", error);
+                    resetUI();
+
+                    if (error.code === error.PERMISSION_DENIED) {
+                        showLocationError("To auto-fill your address, we need access to your location.Please allow location permission in your browser settings and try again.");
+                    } else if (error.code === error.POSITION_UNAVAILABLE) {
+                        showLocationError("Location is unavailable. Please make sure GPS is turned on.");
+                    } else if (error.code === error.TIMEOUT) {
+                        showLocationError("Request timed out. Please try again.");
+                    } else {
+                        showLocationError("An unknown error occurred.");
+                    }
+                },
+                { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+            );
+
+            function resetUI() {
+                loader.classList.add('d-none');
+                locationIcon.classList.remove('d-none');
+                // $(".location-fetch").addClass('d-none');
+            }
+
+            function resetLoader() {
+                loader.classList.add('d-none');
+            }
+        }
+
+        function showLocationError(message) {
+            Swal.fire({
+                title: "📍 Location Access Required",
+                text: message,
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#d33',
+                width: '300px',
+                background: '#fff',
+                color: '#333',
+                customClass: {
+                    popup: 'shadow rounded-3 small-alert',
+                    title: 'swal2-title-lg'  // ← custom class for title
+                }
+            });
+        }
+    </script>
+
+    <script>
+
+        function flyToCartAnimation(imageSelector, cartSelector) {
+            const productImage = document.querySelector(imageSelector);
+            const cartIcon = document.querySelector(cartSelector);
+
+            if (!productImage || !cartIcon) return;
+
+            // Ensure image is loaded
+            if (!productImage.complete || productImage.naturalWidth === 0) {
+                productImage.onload = () => flyToCartAnimation(imageSelector, cartSelector);
+                return;
+            }
+
+            // Get image & cart position relative to viewport
+            const startRect = productImage.getBoundingClientRect();
+            const endRect = cartIcon.getBoundingClientRect();
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            const scrollX = window.scrollX || document.documentElement.scrollLeft;
+
+            const startTop = startRect.top + scrollY;
+            const startLeft = startRect.left + scrollX;
+            const endTop = endRect.top + scrollY;
+            const endLeft = endRect.left + scrollX;
+
+            // Clone image
+            const flyingImage = productImage.cloneNode(true);
+            document.body.appendChild(flyingImage);
+
+            Object.assign(flyingImage.style, {
+                position: 'absolute',
+                top: `${startTop}px`,
+                left: `${startLeft}px`,
+                width: `${startRect.width}px`,
+                height: `${startRect.height}px`,
+                borderRadius: '8px',
+                zIndex: '9999',
+                pointerEvents: 'none',
+                transition: 'transform 0.8s ease, opacity 0.8s ease',
+            });
+
+            // Force reflow
+            flyingImage.offsetWidth;
+
+            // Animate using transform
+            requestAnimationFrame(() => {
+                const dx = endLeft - startLeft;
+                const dy = endTop - startTop;
+                flyingImage.style.transform = `translate(${dx}px, ${dy}px) scale(0.1)`;
+                flyingImage.style.opacity = '0.2';
+            });
+
+            // Cleanup and bounce
+            setTimeout(() => {
+                flyingImage.remove();
+                cartIcon.classList.add("cart-bounce");
+                setTimeout(() => cartIcon.classList.remove("cart-bounce"), 500);
+                $('#productModal').modal('hide');
+            }, 850);
+        }
+
+    </script>
+
+    <script>
+        let selectedAddons = {}; // Store selected addon IDs and quantities
+
+        function getAddons(item_id) {
+
+            selectedAddons = {};
+
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/api/product-addons/${item_id}`,
+                type: 'GET',
+                success: function (response) {
+                    let variantsHtml = '';
+                    const $addonWrapper = $('#productAddonsWrapper'); // wrap container
+
+                    if (response.length > 0) {
+                        $addonWrapper.show();
+                        response.forEach((variant) => {
+                            variantsHtml += `
+                        <button class="btn btn-outline-primary addon-option text-start" 
+                                style="width: auto; display: inline-block;"
+                                data-id="${variant.id}" 
+                                data-item-id="${variant.item_id}" 
+                                data-price="${variant.price}">
+                            ${variant.name} - ${formatCurrency(variant.price)}
+                        </button>
+                        `;
+
+                        });
+                    } else {
+                        $addonWrapper.hide(); // hide the whole section if no addons
+                    }
+
+                    $('#productAddons').html(variantsHtml);
+                },
+                error: function (xhr, error, status) {
+                    console.log('Addon load error:', xhr);
+                }
+            });
+        }
+
+        // Handle addon selection
+        $(document).on('click', '.addon-option', function () {
+            const addonBtn = $(this);
+            const addonId = addonBtn.data('id');
+            const price = parseFloat(addonBtn.data('price'));
+
+            // If already selected, do nothing (handled by + / - buttons)
+            if (selectedAddons[addonId]) return;
+
+            selectedAddons[addonId] = 1;
+
+            addonBtn.replaceWith(`
+            <div class="addon-qty-box border btn-primary active d-flex align-items-center px-3 py-1 gap-2 mb-2" 
+                data-id="${addonId}" data-price="${price}">
+                <span class="flex-grow-1 small fw-semibold">${addonBtn.text()}</span>
+                <button class="btn btn-sm btn-outline-primary addon-minus py-0 px-2">−</button>
+                <span class="addon-qty small">1</span>
+                <button class="btn btn-sm btn-outline-primary addon-plus py-0 px-2">+</button>
+                <button class="btn btn-sm btn-outline-primary addon-remove py-0 px-2">×</button>
+            </div>
+        `);
+
+            updateTotalPrice();
+        });
+
+        // Increment addon quantity
+        $(document).on('click', '.addon-plus', function () {
+            const box = $(this).closest('.addon-qty-box');
+            const id = box.data('id');
+            selectedAddons[id]++;
+            box.find('.addon-qty').text(selectedAddons[id]);
+            updateTotalPrice();
+        });
+
+        // Decrement addon quantity
+        $(document).on('click', '.addon-minus', function () {
+            const box = $(this).closest('.addon-qty-box');
+            const id = box.data('id');
+            if (selectedAddons[id] > 1) {
+                selectedAddons[id]--;
+                box.find('.addon-qty').text(selectedAddons[id]);
+                updateTotalPrice();
+            }
+        });
+
+        // Remove addon completely
+        $(document).on('click', '.addon-remove', function () {
+            const box = $(this).closest('.addon-qty-box');
+            const id = box.data('id');
+            delete selectedAddons[id];
+
+            // Re-render original button
+            const nameText = box.find('span').first().text();
+            $('#productAddons').append(`
+            <button class="btn btn-outline-primary addon-option" 
+                    data-id="${id}" 
+                    data-price="${box.data('price')}">
+                ${nameText}
+            </button>
+        `);
+
+            box.remove();
+            updateTotalPrice();
+        });
+
+        // Update price based on variant + quantity + addons
+        function updateTotalPrice() {
+            const variantPrice = parseFloat($('.variant-option.btn-primary').data('price')) || 0;
+            const baseQty = parseInt($('#productQuantity').val()) || 1;
+
+            let addonTotal = 0;
+            Object.keys(selectedAddons).forEach(id => {
+                const addonQty = selectedAddons[id];
+                const addonPrice = parseFloat($(`.addon-qty-box[data-id='${id}']`).data('price')) || 0;
+                addonTotal += addonQty * addonPrice;
+            });
+
+            const finalTotal = (variantPrice * baseQty) + addonTotal;
+            $('#productPrice').text(formatCurrency(finalTotal.toFixed(0)));
+            $('#addToCartButton').text('Add to Cart - ' + formatCurrency(finalTotal.toFixed(0)));
+        }
+
+    </script>
+
+    <script>
+
+        new Swiper('.desktop-slider', {
+            loop: true,
+            spaceBetween: 20,
+            // centeredSlides: true,
+            autoplay: {
+                delay: 2000,      // time between slides (2.5s)
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1, // mobile
+                },
+                768: {
+                    slidesPerView: 2, // tablet
+                },
+                1024: {
+                    slidesPerView: 3, // desktop
+                }
+            }
+        });
+
+        //     const desktopSlider = document.querySelector('.desktop-slider .slider-desktop');
+
+        // if (desktopSlider) {
+        //     let index = 0;
+        //     const slides = desktopSlider.querySelectorAll('.slide-desktop');
+
+        //     // Duplicate first slide and append (creates seamless loop)
+        //     const clone = slides[0].cloneNode(true);
+        //     desktopSlider.appendChild(clone);
+
+        //     const totalSlides = desktopSlider.querySelectorAll('.slide-desktop').length;
+
+        //     function nextSlide() {
+        //         index++;
+        //         desktopSlider.style.transition = "transform 0.6s ease-in-out";
+        //         desktopSlider.style.transform = `translateX(-${index * 100}%)`;
+
+        //         // When reaching the cloned slide
+        //         if (index === totalSlides - 1) {
+        //             setTimeout(() => {
+        //                 desktopSlider.style.transition = "none";  // disable animation for jump
+        //                 index = 0;  // reset index
+        //                 desktopSlider.style.transform = `translateX(0)`; // jump to first without user noticing
+        //             }, 600); // match transition duration
+        //         }
+        //     }
+
+        //     setInterval(nextSlide, 3000);
+        // }
+
+    </script>
+
+
+    <script>
+        document.getElementById("whatsappFooter").addEventListener("click", function () {
+            /* getBrowserData("9554955305"); */
+            getBrowserData("9554955330");
+            /* let phoneNumber = "9554955305"; // Replace with your number */
+            let phoneNumber = "9554955330"; // Replace with your number
+            let message = "Hello, i want to make my website."; // Custom message
+            let encodedMessage = encodeURIComponent(message); // Encodes spaces & special characters
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+        });
+
+        function openWhatsapp(mobile) {
+            getBrowserData(mobile);
+            let message = "Hello, i want to make my website.";
+            let encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${mobile}?text=${encodedMessage}`, "_blank");
+        }
+
+        function getBrowserNameDetail() {
+            let userAgent = navigator.userAgent;
+
+            if (userAgent.includes("Chrome") && !userAgent.includes("Edg") && !userAgent.includes("OPR")) {
+                return "Chrome";
+            } else if (userAgent.includes("Firefox")) {
+                return "Firefox";
+            } else if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) {
+                return "Safari";
+            } else if (userAgent.includes("OPR") || userAgent.includes("Opera")) {
+                return "Opera";
+            } else if (userAgent.includes("Edg")) {
+                return "Edge";
+            } else if (userAgent.includes("MSIE") || userAgent.includes("Trident")) {
+                return "Internet Explorer";
+            } else {
+                return "Unknown";
+            }
+        }
+
+        function getBrowserData(mobile) {
+            let analyticsData = {
+                browser: getBrowserNameDetail(),
+                browser_detail: navigator.userAgent,
+                device: /Mobi|Android|iPhone/i.test(navigator.userAgent) ? "Mobile" : "Desktop",
+                url: window.location.href,
+                user_device_id: getNewDeviceId(),
+                restaurant_id: "ZDhmYmJiNTM4MzliMDYyMEY1Ri85aDdubFRrT0Q0L0FHQk4xc1E9PQ==",
+                ip_address: "223.228.90.172",
+                latitude: null,
+                longitude: null,
+                mobile: mobile
+            };
+
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        analyticsData.latitude = position.coords.latitude;
+                        analyticsData.longitude = position.coords.longitude;
+                        clickWebsiteFooter(analyticsData);
+                    },
+                    function (error) {
+                        console.warn("Location access denied or unavailable.");
+                        clickWebsiteFooter(analyticsData); // Send data even if location is not available
+                    }
+                );
+            } else {
+                console.warn("Geolocation not supported.");
+                clickWebsiteFooter(analyticsData);
+            }
+            clickWebsiteFooter(analyticsData);
+        }
+
+        function clickWebsiteFooter(data) {
+            $.ajax({
+                url: `https://scanmenu.in/restaurant/save-footer-click`,
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+                },
+                data: JSON.stringify(data),
+                success: function (response) {
+                    //    console.log(response);
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseJSON.message);
+                }
+            });
+        }
+
+        var tableNamePush = "";
+    </script>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top, show the button
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // When the user clicks the button, scroll to the top of the document
+        scrollToTopBtn.addEventListener("click", function () {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        });
+
+        function getNewDeviceId() {
+            if (localStorage.getItem('device_id')) {
+                return localStorage.getItem('device_id');
+            } else {
+                const deviceId = 'device_' + Math.random().toString(36).substring(2);
+                localStorage.setItem('device_id', deviceId);
+                return deviceId;
+            }
+        }
+    </script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyASy44WuPm1mqn_o1P5wMvvZ3nxiPulIF8",
+            authDomain: "test-restaurant-a49b6.firebaseapp.com",
+            projectId: "test-restaurant-a49b6",
+            storageBucket: "test-restaurant-a49b6.firebasestorage.app",
+            messagingSenderId: "234590570523",
+            appId: "1:234590570523:web:ca21bf3621c0fc13b1d0be"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const messaging = getMessaging(app);
+
+        // ✅ Ensure Service Worker is Registered Only Once
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+                if (registrations.length === 0) {
+                    navigator.serviceWorker.register("/firebase-messaging-sw.js")
+                        .then((registration) => {
+                            console.log("Service Worker registered:", registration);
+                        })
+                        .catch((error) => {
+                            console.error("Service Worker registration failed:", error);
+                        });
+                }
+            });
+        }
+
+        async function requestPermission() {
+            try {
+                const permission = await Notification.requestPermission();
+                if (permission === "granted") {
+                    const token = await getToken(messaging, {
+                        vapidKey: "BGD1dsmNVoD7jv5Pb7jl50uVIXMF8F5a0l08mjYWZGNgPz9PeU3IPyR9FSdmxS9Iniz7r-TLsrJosIM1ndvAA8Q"
+                    });
+
+                    /* console.log("FCM Token:", token); */
+
+                    fetch("https://scanmenu.in/restaurant/save-fcm-token", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+                        },
+                        body: JSON.stringify({ 'token': token, 'browser_token': getNewDeviceId(), 'restaurant_id': "ZDhmYmJiNTM4MzliMDYyMEY1Ri85aDdubFRrT0Q0L0FHQk4xc1E9PQ==" }),
+                    });
+
+                    console.log("ts");
+
+                } else {
+
+                    console.error("Permission denied for notifications.");
+                }
+            } catch (error) {
+                console.error("Error getting FCM token", error);
+            }
+        }
+
+        requestPermission();
+
+        // ✅ Prevent Duplicate Notifications in Foreground
+        onMessage(messaging, (payload) => {
+            console.log("Foreground Message Received:", payload);
+
+            if (payload?.data) {
+                const notificationOptions = {
+                    body: payload.data.body,
+                    icon: payload.data?.icon,
+                    badge: payload.data?.badge,
+                    image: payload.data?.image,
+                };
+
+                new Notification(payload.data.title, notificationOptions);
+            }
+        });
+
+        // Handle foreground messages
+        /* onMessage(messaging, (payload) => {
+            console.log("Foreground message received:", payload);
+    
+            // Show browser notification
+            if (Notification.permission === "granted") {
+                const { title, body, icon, image, badge, btn_label, btn_url } = payload.data;
+    
+                const options = {
+                    body: body || '',
+                    icon: icon || '/default-icon.png',
+                    badge: badge || '/default-badge.png',
+                    image: image || '',
+                    data: { url: btn_url || null }
+                };
+    
+                const notification = new Notification(title || 'Notification', options);
+    
+                // Open button URL if set
+                notification.onclick = (event) => {
+                    event.preventDefault();
+                    if (options.data.url) {
+                        window.open(options.data.url, '_blank');
+                    }
+                };
+            }
+        }); */
+    </script>
+
+    <script src="https://scanmenu.in/restaurant/public/sw.js"></script>
+    <script>
+        /* if ("serviceWorker" in navigator) {
+           // Register a service worker hosted at the root of the
+           // site using the default scope.
+           navigator.serviceWorker.register("/sw.js").then(
+           (registration) => {
+              console.log("Service worker registration succeeded:", registration);
+           },
+           (error) => {
+              console.error(`Service worker registration failed: ${error}`);
+           },
+         );
+       } else {
+          console.error("Service workers are not supported.");
+       } */
+
+
+        if (tableNamePush) {
+            document.addEventListener("DOMContentLoaded", function () {
+                document.body.addEventListener("click", function (e) {
+                    if (e.target.closest("#callWaiter")) {
+                        e.preventDefault();
+
+                        const button = e.target.closest("#callWaiter");
+                        const restaurantId = "ZDhmYmJiNTM4MzliMDYyMEY1Ri85aDdubFRrT0Q0L0FHQk4xc1E9PQ==";
+
+
+                        // Disable the button and update the text
+                        button.disabled = true;
+                        button.innerHTML = `<i class="fa fa-bell" style="font-size:20px;"></i> Wait 60s`;
+
+                        // Countdown for 60 seconds
+                        let countdown = 60;
+                        const interval = setInterval(() => {
+                            countdown--;
+                            button.innerHTML = `<i class="fa fa-bell" style="font-size:20px;"></i> Wait ${countdown}s`;
+
+                            if (countdown === 0) {
+                                clearInterval(interval);
+                                button.disabled = false;
+                                button.innerHTML = `<i class="fa fa-bell" style="font-size:20px;"></i> Call Waiter`;
+                            }
+                        }, 1000);
+
+                        // Send AJAX request using Fetch API
+                        fetch(`https://scanmenu.in/restaurant/api/push-order-notification?slug=${tableNamePush}&user_id=${restaurantId}`, {
+                            method: "GET"
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                toastr.success('एक मिनट में Waiter आ जाएगा.', 'Success!');
+                            })
+                            .catch(error => {
+                                toastr.error('Something went wrong.', 'Error!');
+                                console.error('Error fetching:', error);
+                            });
+                    }
+                });
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
